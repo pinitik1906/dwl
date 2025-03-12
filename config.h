@@ -18,7 +18,7 @@ static const unsigned int gappx            = 5;  /* gap pixel between windows */
 static const unsigned int borderpx         = 2;  /* border pixel of windows */
 static const int showbar                   = 1;  /* 0 means no bar */
 static const int topbar                    = 1;  /* 0 means bottom bar */
-static const char *fonts[]                 = { "monospace:size=10", "NotoColorEmoji:size=10:antialias=true:autohint=true" };
+static const char *fonts[]                 = { "monospace:size=9", "NotoColorEmoji:size=9:antialias=true:autohint=true" };
 static const float rootcolor[]             = COLOR(0x000000ff);
 /* This conforms to the xdg-protocol. Set the alpha to zero to restore the old behavior */
 static const float fullscreen_bg[]         = {0.1f, 0.1f, 0.1f, 1.0f}; /* You can also use glsl colors */
@@ -169,12 +169,10 @@ static const Key keys[] = {
 	{ MODKEY,			XKB_KEY_p,			spawn,				SHCMD("wl-color-picker --no-notify clipboard") },
 	{ 0,				XKB_KEY_Print,			spawn,				SHCMD("slurp | grim -g - ~/stuffs/pic/screenshots/$(date +%m-%d-%Y_%T)-screenshot.png && notify-send -t 1250 screenshot_taken") },
 	{ WLR_MODIFIER_CTRL,		XKB_KEY_Print,			spawn,				SHCMD("grim -c ~/stuffs/pic/screenshots/$(date +%m-%d-%Y_%T)-screenshot.png && notify-send -t 1250 screenshot_taken") },
-	{ MODKEY,			XKB_KEY_minus, 	        	spawn,				SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-") },
-	{ MODKEY,			XKB_KEY_equal, 	    		spawn,				SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+") },
-	{ 0,				XKB_KEY_XF86AudioMute,  	spawn,				SHCMD("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle") },
+	{ 0,				XKB_KEY_XF86AudioLowerVolume,	spawn,				SHCMD("wpctl set-volume @DEFAULT_SINK@ 5%-") },
+	{ 0, 				XKB_KEY_XF86AudioRaiseVolume,	spawn,				SHCMD("wpctl set-volume @DEFAULT_SINK@ 5%+") },
+	{ 0,				XKB_KEY_XF86AudioMute,  	spawn,				SHCMD("wpctl set-mute @DEFAULT_SINK@ toggle") },
 	{ 0, 				XKB_KEY_XF86AudioMicMute,	spawn,				SHCMD("pactl set-source-mute @DEFAULT_SOURCE@ toggle") },
-	{ 0,				XKB_KEY_XF86AudioLowerVolume,	spawn,				SHCMD("wpctl set-sink-volume @DEFAULT_AUDIO_SINK@ 5%-)") },
-	{ 0, 				XKB_KEY_XF86AudioRaiseVolume,	spawn,				SHCMD("wpctl set-sink-volume @DEFAULT_AUDIO_SINK@ 5%+)") },
 	{ 0, 				XKB_KEY_XF86MonBrightnessDown,	spawn,				{.v = (const char*[]){ "brightnessctl", "set", "150-", NULL } } },
 	{ 0, 				XKB_KEY_XF86MonBrightnessUp,	spawn,				{.v = (const char*[]){ "brightnessctl", "set", "+150", NULL } } },
 	/* { MODKEY,			XKB_KEY_b,			togglebar,      		{0} }, */
