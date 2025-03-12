@@ -21,5 +21,6 @@
 + fullscreenadaptivesync
 + gaps
 + naturalscrolltrackpad
++ simpleborders
 + swallow
 + xwayland-handle-minimize
