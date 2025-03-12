@@ -24,3 +24,12 @@
 + simpleborders
 + swallow
 + xwayland-handle-minimize
+
+## install
+to install my dwl, type
+
+```
+git clone --depth 1 https://github.com/pinitik1906/dwl.git $HOME/stuffs/git/dwl
+cd $HOME/stuffs/git/dwl
+sudo make clean install
+```
