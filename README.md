@@ -18,7 +18,6 @@
 + attachbottom
 + autostart
 + bar
-+ fullscreenadaptivesync
 + gaps
 + naturalscrolltrackpad
 + simpleborders
