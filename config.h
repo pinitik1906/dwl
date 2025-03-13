@@ -93,7 +93,7 @@ static const struct xkb_rule_names xkb_rules = {
 static const int repeat_rate = 50;
 static const int repeat_delay = 300;
 
-/* Trackpad */
+/* trackpad */
 static const int tap_to_click = 1;
 static const int tap_and_drag = 1;
 static const int drag_lock = 1;

@@ -19,6 +19,7 @@
 + autostart
 + bar
 + gaps
++ hide_vacant_tags
 + naturalscrolltrackpad
 + simpleborders
 + swallow
