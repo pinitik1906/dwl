@@ -33,3 +33,6 @@ git clone --depth 1 https://github.com/pinitik1906/dwl.git $HOME/stuffs/git/dwl
 cd $HOME/stuffs/git/dwl
 sudo make clean install
 ```
+
+## configure
+to configure my dwl build, please only configure in `config.h`

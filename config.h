@@ -163,8 +163,8 @@ static const Key keys[] = {
 	{ MODKEY|WLR_MODIFIER_SHIFT, 	XKB_KEY_Q,			quit,				{0} },
 	{ MODKEY,		     	XKB_KEY_t,			togglefloating,			{0} },
 	{ MODKEY,                    	XKB_KEY_f,			togglefullscreen,		{0} },
-	/* { MODKEY,                    	XKB_KEY_a,			toggleswallow,  		{0} }, */
-	/* { MODKEY|WLR_MODIFIER_SHIFT, 	XKB_KEY_A,          		toggleautoswallow,		{0} }, */
+	/* { MODKEY,			XKB_KEY_a,			toggleswallow,  		{0} }, */
+	/* { MODKEY|WLR_MODIFIER_SHIFT,	XKB_KEY_A,          		toggleautoswallow,		{0} }, */
 	{ MODKEY|WLR_MODIFIER_SHIFT,	XKB_KEY_F,			togglefullscreenadaptivesync, 	{0} },
 	{ MODKEY,			XKB_KEY_p,			spawn,				SHCMD("wl-color-picker --no-notify clipboard") },
 	{ 0,				XKB_KEY_Print,			spawn,				SHCMD("slurp | grim -g - ~/stuffs/pic/screenshots/$(date +%m-%d-%Y_%T)-screenshot.png && notify-send -t 1250 screenshot_taken") },
@@ -173,8 +173,8 @@ static const Key keys[] = {
 	{ 0, 				XKB_KEY_XF86AudioRaiseVolume,	spawn,				SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+") },
 	{ 0,				XKB_KEY_XF86AudioMute,  	spawn,				SHCMD("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle") },
 	{ 0, 				XKB_KEY_XF86AudioMicMute,	spawn,				SHCMD("pactl set-source-mute @DEFAULT_SOURCE@ toggle") },
-	{ 0, 				XKB_KEY_XF86MonBrightnessDown,	spawn,				{.v = (const char*[]){ "brightnessctl", "set", "150-", NULL } } },
-	{ 0, 				XKB_KEY_XF86MonBrightnessUp,	spawn,				{.v = (const char*[]){ "brightnessctl", "set", "+150", NULL } } },
+	{ 0, 				XKB_KEY_XF86MonBrightnessDown,	spawn,				SHCMD("brightnessctl set 150-") },
+	{ 0, 				XKB_KEY_XF86MonBrightnessUp,	spawn,				SHCMD("brightnessctl set +150") },
 	/* { MODKEY,			XKB_KEY_b,			togglebar,      		{0} }, */
 	/* { MODKEY,                    XKB_KEY_i,          		incnmaster,     		{.i = +1} }, */
 	/* { MODKEY,                    XKB_KEY_d,          		incnmaster,     		{.i = -1} }, */
