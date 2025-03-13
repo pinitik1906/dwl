@@ -40,11 +40,12 @@ static int log_level = WLR_ERROR;
 
 /* autostart */ 
 static const char *const autostart[] = {
-	"swaybg", "-m", "fill", "-i" "/home/dompitik/.config/bg/pacman.png", NULL,
+	"swaybg", "-m", "fill", "-i", "/home/dompitik/.config/bg/pacman.png", NULL,
 	"mpd", "--no-daemon", "/home/dompitik/.config/mpd/mpd.conf", NULL,
 	"dunst", NULL,
 	"gammastep", "-Pxr", "-O", "2300", NULL,
 	"/usr/libexec/polkit-mate-authentication-agent-1", NULL,
+	"slstatus", "-s", NULL,
         NULL /* terminate */
 };
 
@@ -173,8 +174,8 @@ static const Key keys[] = {
 	{ 0, 				XKB_KEY_XF86AudioRaiseVolume,	spawn,				SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+") },
 	{ 0,				XKB_KEY_XF86AudioMute,  	spawn,				SHCMD("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle") },
 	{ 0, 				XKB_KEY_XF86AudioMicMute,	spawn,				SHCMD("pactl set-source-mute @DEFAULT_SOURCE@ toggle") },
-	{ 0, 				XKB_KEY_XF86MonBrightnessDown,	spawn,				SHCMD("brightnessctl set 150-") },
-	{ 0, 				XKB_KEY_XF86MonBrightnessUp,	spawn,				SHCMD("brightnessctl set +150") },
+	{ 0, 				XKB_KEY_XF86MonBrightnessDown,	spawn,				SHCMD("brightnessctl set 130-") },
+	{ 0, 				XKB_KEY_XF86MonBrightnessUp,	spawn,				SHCMD("brightnessctl set +130") },
 	/* { MODKEY,			XKB_KEY_b,			togglebar,      		{0} }, */
 	/* { MODKEY,                    XKB_KEY_i,          		incnmaster,     		{.i = +1} }, */
 	/* { MODKEY,                    XKB_KEY_d,          		incnmaster,     		{.i = -1} }, */
@@ -204,7 +205,6 @@ static const Key keys[] = {
 	{ MODKEY,			XKB_KEY_s,	    		spawn,				{.v = (const char*[]){ TERMINAL, "-e", "ncmpcpp", "-q", NULL } } },
 	{ MODKEY,			XKB_KEY_a,          		spawn,				{.v = (const char*[]){ TERMINAL, "-e", "newsboat", "-q", NULL } } },
 	{ MODKEY|WLR_MODIFIER_CTRL,	XKB_KEY_c,	    		spawn,				SHCMD("ffplay -loglevel -8 -fast /dev/video0") },
-	{ MODKEY,			XKB_KEY_b,			spawn,	   			SHCMD("notify-send -t 2000 $(date +%H:%M:%S) $(date +%m/%d/%Y)") },
 
 	/* tags */
 	TAGKEYS(          	    	XKB_KEY_1,			XKB_KEY_exclam,                	0),
