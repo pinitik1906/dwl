@@ -21,6 +21,7 @@
 + gaps
 + hide_vacant_tags
 + naturalscrolltrackpad
++ pointer-gestures-unstable-v1
 + simpleborders
 + swallow
 + xwayland-handle-minimize
@@ -35,4 +36,4 @@ sudo make clean install
 ```
 
 ## configure
-to configure my dwl build, please only configure in `config.h`
+to edit my dwl build, please only configure in `config.h`
