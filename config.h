@@ -166,6 +166,7 @@ static const Key keys[] = {
 	{ MODKEY|WLR_MODIFIER_SHIFT, 	XKB_KEY_Q,			quit,				{0} },
 	{ MODKEY,		     	XKB_KEY_t,			togglefloating,			{0} },
 	{ MODKEY,                    	XKB_KEY_f,			togglefullscreen,		{0} },
+	{ MODKEY,			XKB_KEY_comma,			spawn,				SHCMD("swaylock --indicator-thickness 7 --inside-color 00000000 --font-size 16 -nes fill -i ~/.config/bg/lock.png | loginctl suspend") },
 	{ MODKEY,			XKB_KEY_p,			spawn,				SHCMD("wl-color-picker --no-notify clipboard") },
 	{ 0,				XKB_KEY_Print,			spawn,				SHCMD("slurp | grim -g - ~/stuffs/pic/screenshots/$(date +%m-%d-%Y_%T)-screenshot.png && notify-send -t 1250 screenshot_taken") },
 	{ WLR_MODIFIER_CTRL,		XKB_KEY_Print,			spawn,				SHCMD("grim -c ~/stuffs/pic/screenshots/$(date +%m-%d-%Y_%T)-screenshot.png && notify-send -t 1250 screenshot_taken") },
@@ -175,6 +176,7 @@ static const Key keys[] = {
 	{ 0, 				XKB_KEY_XF86AudioMicMute,	spawn,				SHCMD("pactl set-source-mute @DEFAULT_SOURCE@ toggle") },
 	{ 0, 				XKB_KEY_XF86MonBrightnessDown,	spawn,				SHCMD("brightnessctl set 130-") },
 	{ 0, 				XKB_KEY_XF86MonBrightnessUp,	spawn,				SHCMD("brightnessctl set +130") },
+	{ MODKEY,			XKB_KEY_space,			spawn,				SHCMD("dunstctl history-pop") },
 	/* { MODKEY,			XKB_KEY_b,			togglebar,      		{0} }, */
 	/* { MODKEY,                    XKB_KEY_i,          		incnmaster,     		{.i = +1} }, */
 	/* { MODKEY,                    XKB_KEY_d,          		incnmaster,     		{.i = -1} }, */
