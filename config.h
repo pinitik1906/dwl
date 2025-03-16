@@ -45,7 +45,6 @@ static const char *const autostart[] = {
 	"dunst", NULL,
 	"gammastep", "-Pxr", "-O", "2300", NULL,
 	"/usr/libexec/polkit-mate-authentication-agent-1", NULL,
-	"slstatus", "-s", NULL,
         NULL /* terminate */
 };
 
