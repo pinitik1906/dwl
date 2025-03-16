@@ -1,5 +1,7 @@
 **dwl v0.7**
 
+**NOTE**: i could not implement the lock and suspend from your laptop when the lid is closed. please use the keybinds manually instead: Super + Comma
+
 ## dependencies
 (if it does not build, you might need to install the `*-devel` packages also)
 
