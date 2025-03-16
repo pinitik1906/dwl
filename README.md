@@ -7,6 +7,7 @@
 
 + `libinput`
 + `wayland`
++ `wayland-protocols`
 + `wlroots0.18`
 + `xkbcommon`
 + `pkg-config`
