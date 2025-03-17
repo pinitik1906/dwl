@@ -174,8 +174,8 @@ static const Key keys[] = {
 	{ 0, 				XKB_KEY_XF86AudioRaiseVolume,	spawn,				SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+") },
 	{ 0,				XKB_KEY_XF86AudioMute,  	spawn,				SHCMD("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle") },
 	{ 0, 				XKB_KEY_XF86AudioMicMute,	spawn,				SHCMD("pactl set-source-mute @DEFAULT_SOURCE@ toggle") },
-	{ 0, 				XKB_KEY_XF86MonBrightnessDown,	spawn,				SHCMD("brightnessctl set 130-") },
-	{ 0, 				XKB_KEY_XF86MonBrightnessUp,	spawn,				SHCMD("brightnessctl set +130") },
+	{ 0, 				XKB_KEY_XF86MonBrightnessDown,	spawn,				SHCMD("brillo -u 150000 -q -U 10 -v 0") },
+	{ 0, 				XKB_KEY_XF86MonBrightnessUp,	spawn,				SHCMD("brillo -u 150000 -q -A 10 -v 0") },
 	{ MODKEY,			XKB_KEY_space,			spawn,				SHCMD("dunstctl history-pop") },
 	/* { MODKEY,			XKB_KEY_b,			togglebar,      		{0} }, */
 	/* { MODKEY,                    XKB_KEY_i,          		incnmaster,     		{.i = +1} }, */
