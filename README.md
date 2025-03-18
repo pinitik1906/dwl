@@ -7,14 +7,14 @@
 
 + `fcft`
 + `libinput`
++ `pkg-config`
 + `wayland`
 + `wayland-protocols`
 + `wlroots0.18`
 + `xkbcommon`
 
-**(i have enabled xwayland support, so install the additional dependencies)**
+(i have enabled xwayland support, so install the additional dependencies)
 + `libxcb`
-+ `pkg-config`
 + `xwayland`
 
 ## patches
