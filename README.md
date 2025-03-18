@@ -5,15 +5,17 @@
 ## dependencies
 (if it does not build, you might need to install the `*-devel` packages also)
 
++ `fcft`
 + `libinput`
 + `wayland`
 + `wayland-protocols`
 + `wlroots0.18`
 + `xkbcommon`
-+ `pkg-config`
+
+**(i have enabled xwayland support, so install the additional dependencies)**
 + `libxcb`
++ `pkg-config`
 + `xwayland`
-+ `fcft`
 
 ## patches
 
