@@ -8,6 +8,7 @@
 + `fcft`
 + `libinput`
 + `pkg-config`
++ `tllist`
 + `wayland`
 + `wayland-protocols`
 + `wlroots0.18`
