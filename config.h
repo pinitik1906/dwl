@@ -206,6 +206,7 @@ static const Key keys[] = {
 	{ MODKEY,			XKB_KEY_s,	    		spawn,				{.v = (const char*[]){ TERMINAL, "-e", "ncmpcpp", "-q", NULL } } },
 	{ MODKEY,			XKB_KEY_a,          		spawn,				{.v = (const char*[]){ TERMINAL, "-e", "newsboat", "-q", NULL } } },
 	{ MODKEY|WLR_MODIFIER_CTRL,	XKB_KEY_c,	    		spawn,				SHCMD("ffplay -loglevel -8 -fast /dev/video0") },
+	{ MODKEY,			XKB_KEY_space,	    		spawn,				SHCMD("dunstctl history-pop") },
 
 	/* tags */
 	TAGKEYS(          	    	XKB_KEY_1,			XKB_KEY_exclam,                	0),
