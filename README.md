@@ -29,6 +29,7 @@
 + naturalscrolltrackpad
 + pointer-gestures-unstable-v1
 + simpleborders
++ sticky
 + swallow
 + xwayland-handle-minimize
 

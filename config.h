@@ -164,6 +164,7 @@ static const Key keys[] = {
 	{ MODKEY,                    	XKB_KEY_k,          		focusstack,     		{.i = -1} },
 	{ MODKEY, 		     	XKB_KEY_q,			killclient,			{0} },
 	{ MODKEY|WLR_MODIFIER_SHIFT, 	XKB_KEY_Q,			quit,				{0} },
+	{ MODKEY|WLR_MODIFIER_SHIFT,	XKB_KEY_S,			togglesticky,			{0} },
 	{ MODKEY,		     	XKB_KEY_t,			togglefloating,			{0} },
 	{ MODKEY,                    	XKB_KEY_f,			togglefullscreen,		{0} },
 	{ MODKEY,			XKB_KEY_comma,			spawn,				SHCMD("swaylock --indicator-thickness 7 --inside-color 00000000 --font-size 16 -nes fill -i ~/.config/bg/lock.png | loginctl suspend") },
@@ -177,7 +178,7 @@ static const Key keys[] = {
 	{ 0, 				XKB_KEY_XF86MonBrightnessDown,	spawn,				SHCMD("brillo -u 150000 -q -U 10 -v 0") },
 	{ 0, 				XKB_KEY_XF86MonBrightnessUp,	spawn,				SHCMD("brillo -u 150000 -q -A 10 -v 0") },
 	{ MODKEY,			XKB_KEY_space,			spawn,				SHCMD("dunstctl history-pop") },
-	/* { MODKEY,			XKB_KEY_b,			togglebar,      		{0} }, */
+	{ MODKEY,			XKB_KEY_b,			togglebar,      		{0} },
 	/* { MODKEY,                    XKB_KEY_i,          		incnmaster,     		{.i = +1} }, */
 	/* { MODKEY,                    XKB_KEY_d,          		incnmaster,     		{.i = -1} }, */
 	/* { MODKEY,                    XKB_KEY_Return,     		zoom,           		{0} }, */
