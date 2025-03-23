@@ -150,7 +150,7 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 
 /* commands */
 static const char *termcmd[] = { "foot", NULL };
-static const char *menucmd[] = { "wmenu-run", "-i", "-f", "monospace 9", "-N", "3c3836", "-n", "#ebdbb2", "-S", "005577", "-s", "fbf1c7", NULL };
+static const char *menucmd[] = { "tofi-drun", NULL };
 
 static const Key keys[] = {
 	/* note that Shift changes certain key codes: c -> C, 2 -> at, etc. */
@@ -207,6 +207,9 @@ static const Key keys[] = {
 	{ MODKEY,			XKB_KEY_a,          		spawn,				{.v = (const char*[]){ TERMINAL, "-e", "newsboat", "-q", NULL } } },
 	{ MODKEY|WLR_MODIFIER_CTRL,	XKB_KEY_c,	    		spawn,				SHCMD("ffplay -loglevel -8 -fast /dev/video0") },
 	{ MODKEY,			XKB_KEY_space,	    		spawn,				SHCMD("dunstctl history-pop") },
+	{ MODKEY,			XKB_KEY_y,	    		spawn,				SHCMD("yt -g") },
+	{ MODKEY,			XKB_KEY_semicolon,    		spawn,				SHCMD("tofi-emoji") },
+	{ MODKEY,			XKB_KEY_m,			spawn,				SHCMD("tofi-mounter") },
 
 	/* tags */
 	TAGKEYS(          	    	XKB_KEY_1,			XKB_KEY_exclam,                	0),
