@@ -8,6 +8,7 @@
 + `fcft`
 + `libinput`
 + `pkg-config`
++ `pixman`
 + `tllist`
 + `wayland`
 + `wayland-protocols`
