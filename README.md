@@ -28,6 +28,7 @@
 + gaps
 + hide_vacant_tags
 + naturalscrolltrackpad
++ pertag
 + pointer-gestures-unstable-v1
 + simpleborders
 + sticky
