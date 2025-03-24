@@ -28,7 +28,7 @@ static uint32_t colors[][3]                = {
 
 	/*               fg          bg          border    */
 	[SchemeNorm] = { 0xebdbb2ff, 0x3c3836ff, 0x7b6e63ff },
-	[SchemeSel]  = { 0xfbf1c7ff, 0x005577ff, 0x005577ff },
+	[SchemeSel]  = { 0xfbf1c7ff, 0x458588ff, 0x458588ff },
 	[SchemeUrg]  = { 0,          0,          0x770000ff },
 };
 
@@ -205,6 +205,7 @@ static const Key keys[] = {
 	{ MODKEY,			XKB_KEY_e,	    		spawn,				{.v = (const char*[]){ MAIL, NULL } } },
 	{ MODKEY,			XKB_KEY_r,	    		spawn,				{.v = (const char*[]){ TERMINAL, "-e", "lfub", NULL } } },
 	{ MODKEY,			XKB_KEY_s,	    		spawn,				{.v = (const char*[]){ TERMINAL, "-e", "ncmpcpp", "-q", NULL } } },
+	{ MODKEY,			XKB_KEY_c,          		spawn,				{.v = (const char*[]){ TERMINAL, "-e", "calcurse", "-q", NULL } } },
 	{ MODKEY,			XKB_KEY_a,          		spawn,				{.v = (const char*[]){ TERMINAL, "-e", "newsboat", "-q", NULL } } },
 	{ MODKEY|WLR_MODIFIER_CTRL,	XKB_KEY_c,	    		spawn,				SHCMD("ffplay -loglevel -8 -fast /dev/video0") },
 	{ MODKEY,			XKB_KEY_space,	    		spawn,				SHCMD("dunstctl history-pop") },
