@@ -25,7 +25,6 @@
 + attachbottom
 + autostart
 + bar
-+ dragmfact
 + gaps
 + hide_vacant_tags
 + naturalscrolltrackpad
