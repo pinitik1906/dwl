@@ -41,11 +41,9 @@ static int log_level = WLR_ERROR;
 
 /* autostart */ 
 static const char *const autostart[] = {
-	"swaybg", "-m", "fill", "-i", "/home/dompitik/.config/bg/pacman.png", NULL,
-	"mpd", "--no-daemon", "/home/dompitik/.config/mpd/mpd.conf", NULL,
 	"dunst", NULL,
 	"gammastep", "-Pxr", "-O", "2300", NULL,
-	"/usr/libexec/polkit-mate-authentication-agent-1", NULL,
+	"/usr/lib/mate-polkit/polkit-mate-authentication-agent-1", NULL,
         NULL /* terminate */
 };
 
