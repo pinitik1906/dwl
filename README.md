@@ -48,4 +48,4 @@ sudo make clean install
 to edit my dwl build, please only configure in `config.h`
 
 ### if you are in void linux..
-- change "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1", NULL, to "/usr/libexec/polkit-mate-authentication-agent-1", NULL, to make mate-polkit properly working
+- change `"/usr/lib/mate-polkit/polkit-mate-authentication-agent-1", NULL,` to `"/usr/libexec/polkit-mate-authentication-agent-1", NULL,` in autostart section to make mate-polkit properly working
