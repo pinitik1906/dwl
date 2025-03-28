@@ -166,7 +166,7 @@ static const Key keys[] = {
 	{ MODKEY|WLR_MODIFIER_SHIFT,	XKB_KEY_S,			togglesticky,			{0} },
 	{ MODKEY,		     	XKB_KEY_t,			togglefloating,			{0} },
 	{ MODKEY,                    	XKB_KEY_f,			togglefullscreen,		{0} },
-	{ MODKEY,			XKB_KEY_comma,			spawn,				SHCMD("swaylock --indicator-thickness 7 --inside-color 00000000 --font-size 16 -nes fill -i ~/.config/bg/lock.png | loginctl suspend") },
+	{ MODKEY,			XKB_KEY_comma,			spawn,				SHCMD("swaylock --indicator-thickness 7 --inside-color 00000000 --font-size 16 -ne | loginctl suspend") },
 	{ MODKEY,			XKB_KEY_p,			spawn,				SHCMD("wl-color-picker --no-notify clipboard") },
 	{ 0,				XKB_KEY_Print,			spawn,				SHCMD("slurp | grim -g - ~/stuffs/pic/screenshots/screenshot-$(date +%m-%d-%Y_%T).png && notify-send -t 1250 screenshot_taken") },
 	{ WLR_MODIFIER_CTRL,		XKB_KEY_Print,			spawn,				SHCMD("grim ~/stuffs/pic/screenshots/screenshot-$(date +%m-%d-%Y_%T).png && notify-send -t 1250 screenshot_taken") },
