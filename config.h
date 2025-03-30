@@ -27,9 +27,9 @@ static int enableautoswallow 		   = 1; /* enables autoswallowing newly spawned c
 static uint32_t colors[][3]                = {
 
 	/*               fg          bg          border    */
-	[SchemeNorm] = { 0xebdbb2ff, 0x3c3836ff, 0x7b6e63ff },
-	[SchemeSel]  = { 0xfbf1c7ff, 0x458588ff, 0x458588ff },
-	[SchemeUrg]  = { 0,          0,          0x770000ff },
+	[SchemeNorm] = { 0xa89984ff, 0x32302fff, 0x928374ff },
+	[SchemeSel]  = { 0xebdbb2ff, 0x458588ff, 0x458588ff },
+	[SchemeUrg]  = { 0,          0,          0xcc241dff },
 };
 
 /* tagging - TAGCOUNT must be no greater than 31 */
